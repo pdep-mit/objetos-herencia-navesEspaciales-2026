@@ -20,6 +20,12 @@ class NaveDeCarga inherits Nave {
 
 }
 
+class NaveDeResiduosRadiactivos inherits NaveDeCarga {
+	var property sellada = false
+
+	method sellate() { sellada = true }
+}
+
 class NaveDePasajeros inherits Nave {
 
 	var property alarma = false

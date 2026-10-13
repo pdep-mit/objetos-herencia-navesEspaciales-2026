@@ -5,6 +5,16 @@ describe "Nave de carga" {
 	const naveVacia = new NaveDeCarga()
 	const naveLlena = new NaveDeCarga(carga = 500000, velocidad = 290000)
 
+	test "nave se propulsa" {
+		naveVacia.propulsate()
+		assert.equals(20000, naveVacia.velocidad())
+	}
+
+	test "nave se propulsa hasta el tope" {
+		naveLlena.propulsate()
+		assert.equals(300000, naveLlena.velocidad())
+	}
+
 	test "sobrecargada" {
 		assert.that(naveLlena.sobrecargada())
 	}
